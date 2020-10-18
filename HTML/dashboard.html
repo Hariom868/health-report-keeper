@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+	<head>
+		<title>
+			Record
+		</title>
+		<link rel="stylesheet" type="text/css" href="../CSS/Dashboard.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<header class="opening linkage clearfix">
+			<div class="first word clearfix">
+				<div>
+					<h1 style="color:Yellow">&emsp;Health Report</h1>
+				</div>
+				<div class="button">
+					<ul class="ho">
+						<li>
+							<a href="#" style="text-decoration: none; color:orange;">Home
+							</a>
+						</li>
+						<li>
+							<a href="#" style="text-decoration: none; color:orange;">Add Member
+							</a>
+						</li>
+						<li><a href="#" style="text-decoration: none; color:orange;">About us
+							</a>
+						</li>
+						<li><a href="#" style="text-decoration: none; color:orange;">Logout
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+	<br><br>
+	<div class="slideshow-container">
+			<div class="mySlides fade">
+				<div class="numbertext">1 / 3</div>
+				<img src="../Images/Dashboard/pic1.jpg" alt="pic1" style="width:100%"height=332px;>
+			</div>
+
+			<div class="mySlides fade">
+				<div class="numbertext">2 / 3</div>
+				<img src="../Images/Dashboard/pic2.jpg" alt="pic2" style="width:100%">
+			</div>
+
+			<div class="mySlides fade">
+				<div class="numbertext">3 / 3</div>
+				<img src="../Images/Dashboard/pic3.jpg" alt="pic3" style="width:100%">
+			</div>
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+	<div>
+		<hr class="new">
+	</div>
+	<div class="services">
+		<h1 style="text-align: center;text-decoration: underline;">Services</h1>
+		<br><br>
+		<div class="add_report">
+			<div class="row">
+				<div class="column1">
+					<div class="label">Add Report</div>
+					<div class="add_report_text">
+						<p>
+							<span>
+								You can add your new reports here.
+							</span>
+						</p>
+					</div>
+				</div>
+				<div class="column2">
+					<div class="add_report_image">
+						<img src="../Images/Dashboard/add_report.jpg" alt="Health Report" align="right" style="max-width:500px ; max-height:400px;">
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br><br>
+		<div class="view_report">
+			<div class="row">
+				<div class="column1">
+					<div class="add_report_image">
+						<img src="../Images/Dashboard/view_report.png" alt="Health Report" align="right" style="max-width:500px ; max-height:400px;">
+					</div>
+				</div>
+				<div class="column2">
+					<div class="label">View Report</div>
+					<div class="view_report_text">
+						<p>
+							<span>
+								You can view your previously uploaded reports.
+							</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br>
+		<div class="add_health_expenses">
+			<div class="row">
+				<div class="column1">
+					<div class="label">Add Health Expenses</div>
+					<div class="add_health_expenses_text">
+						<p>
+							<span>
+								You can add your health expenses here.
+							</span>
+						</p>
+					</div>
+				</div>
+				<div class="column2">
+					<div class="add_health_expenses_image">
+						<img src="../Images/Dashboard/health_expenses.jpg" alt="Health Report" align="right" style="max-width:500px ; max-height:400px;">
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br>
+		<div class="view_report">
+			<div class="row">
+				<div class="column1">
+					<div class="add_report_image">
+						<img src="../Images/Dashboard/Health_news.jpg" alt="Health Report" align="right" style="max-width:500px ; max-height:400px;">
+					</div>
+				</div>
+				<div class="column2">
+					<div class="label">News</div>
+					<div class="view_report_text">
+						<p>
+							<span>
+								Get the latest news regarding health.
+							</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="address">
+			<p style="color:blue">
+				Rambha Enclave, Mumbai<br>
+				hariom@gmail.com<br>
+				+91 9338389395<br>
+				Feel free to contact us
+				
+				
+			</p>
+		</div>
+	</footer>
+	
+		<script>
+		var myIndex = 0;
+		carousel();
+
+		function carousel() {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides");
+		  for (i = 0; i < x.length; i++) {
+		    x[i].style.display = "none";
+			}
+		  myIndex++;
+		  if (myIndex > x.length) {myIndex = 1}
+		  x[myIndex-1].style.display = "block";
+		  setTimeout(carousel, 2000); // Change image every 2 seconds
+		}
+		</script>
+	</body>
+</html>
