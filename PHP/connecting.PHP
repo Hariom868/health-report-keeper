@@ -2,7 +2,7 @@
 define('server','localhost');// defining hostname
 define('username','root'); // defining username
 define('password' ,''); // defining Password
-define('databasename', 'NHDD');// defining database name
+define('databasename', 'hrk');// defining database name
 class Database_Connection
 {
 function __construct()
@@ -14,33 +14,9 @@ if (mysqli_connect_errno())
 echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 }
-// Here is the function for signup which we will callout when we do signup
-public function insertionvalue($username,$name,$type,$useremail,$userpassword)
+public function signup($name,$username,$useremail,$userpassword,$income,$member)
 {
-$adding=mysqli_query($this->dbhost,"insert into expenses(user,name,type,date,cost) values('$username','$name','$type','$useremail','$userpassword')");
-return $adding;
-}
-public function viewing($username,$how)
-{
-$viewing = mysqli_query($this->dbhost,"select * from expenses where user='$username' and type='$how'");
-return $viewing;
-}
-public function dateviewing($fdate,$tdate,$username)
-{
-
-$dateviewing = mysqli_query($this->dbhost,"SELECT *  From expenses  where (date BETWEEN '$fdate' and '$tdate') and (user='$username')");
-return $dateviewing;
-}
-}
-class Database_Connection1 extends Database_Connection
-{
-function __construct() {
-        parent::__construct();
-        
-    }
-public function signup($name,$username,$useremail,$userpassword)
-{
-$adding=mysqli_query($this->dbhost,"insert into signupid(Name,Username,Email,Password) values('$name','$username','$useremail','$userpassword')");
+$adding=mysqli_query($this->dbhost,"insert into signupid(Name,Username,Email,Password,income,no of member) values('$name','$username','$useremail','$userpassword','$income','$member')");
 return $adding;
 }
 
